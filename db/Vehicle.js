@@ -3,7 +3,7 @@ var knex = require('./knexMain')
 module.exports = {
 
   findOne: (id) => {
-    return  knex('vehicles').where('vehicle_id', id)
+    return  knex('vehicles').where('vehicle_user_id', id)
   },
 
   create: (vehicle) => {

@@ -6,7 +6,7 @@ var Vehicle = require('../db/Vehicle')
 
 router.get('/:user_id', (req, res) => {
   Vehicle.findOne(req.params.user_id)
-    .then((data) => res.send(data))
+    .then((data) => res.send(data[0]))
     .catch((err) => res.send(err))
 })
 
