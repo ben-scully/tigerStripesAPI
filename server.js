@@ -8,6 +8,7 @@ var user_routes = require('./routes/user_routes')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use('/', home_routes)
 app.use('/user', user_routes)
 
 app.listen(port, function() {
