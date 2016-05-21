@@ -4,6 +4,7 @@ exports.up = (knex, Promise) => {
 
   return  knex.schema.createTableIfNotExists('vehicles', function (table) {
       table.increments('vehicle_id')
+      table.string('vehicle_user_id')
       table.string('vehicle_licence_plate')
       table.date('vehicle_registration_expiry')
       table.string('vehicle_registration_photo')

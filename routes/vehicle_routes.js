@@ -1,19 +1,19 @@
 var express = require('express')
 var router = express.Router()
-var DriverLicence = require('../db/DriverLicence')
+var Vehicle = require('../db/Vehicle')
 
 /***********  GETS  **************/
 
 router.get('/:user_id', (req, res) => {
-  DriverLicence.findOne(req.params.user_id)
-    .then((data) => res.send(data[0]))
+  Vehicle.findOne(req.params.user_id)
+    .then((data) => res.send(data))
     .catch((err) => res.send(err))
 })
 
 /***********  POSTS  **************/
 
 router.post('/create', (req, res) => {
-  DriverLicence.create(req.body.create)
+  Vehicle.create(req.body.vehicle)
     .then((data) => res.send(data[0]))
     .catch((err) => res.send(err))
 })
