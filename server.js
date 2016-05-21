@@ -3,6 +3,7 @@ var bodyParser = require('body-parser')
 var app = express()
 var port = process.env.PORT || 3000
 
+var home_routes = require('./routes/home_routes')
 var user_routes = require('./routes/user_routes')
 
 app.use(bodyParser.json())
