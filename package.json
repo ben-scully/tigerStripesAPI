@@ -25,7 +25,8 @@
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
-    "knex": "^0.11.3"
+    "knex": "^0.11.3",
+    "pg": "^4.5.5"
   },
   "devDependencies": {
     "redtape": "^1.0.0",
